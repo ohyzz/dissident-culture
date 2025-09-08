@@ -104,7 +104,6 @@ body {
 }
 
 .brand-item:hover {
-    background-color: rgba(233, 69, 96, 0.1);
     border-color: #d476ff;
     color: #fff;
     transform: translateY(-3px);
