@@ -11,7 +11,6 @@ body {
     color: #fff;
     font-family: 'Inter', sans-serif;
     height: 100vh;
-    overflow: hidden;
     position: relative;
 }
 
@@ -24,7 +23,6 @@ body {
     width: 100%;
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
-    animation-delay: 0.5s;
 }
 
 .dissident-text {
@@ -35,9 +33,6 @@ body {
     margin-bottom: -0.5rem;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     opacity: 90%;
-    transform: translateY(30px);
-    animation: textAppear 1.5s ease-out forwards;
-    animation-delay: 1s;
 }
 
 .culture-text {
@@ -48,9 +43,6 @@ body {
     text-transform: uppercase;
     color: #ccc;
     opacity: 80%;
-    transform: translateY(20px);
-    animation: textAppear 1.5s ease-out forwards;
-    animation-delay: 1.5s;
 }
 
 /* Боковая панель */
