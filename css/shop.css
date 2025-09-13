@@ -75,6 +75,9 @@
 }
 
 .shop-item {
+    display: flex;
+    flex-direction: column;
+    min-height: 550px;
     background: rgba(20, 20, 20, 0.8);
     border-radius: 8px;
     overflow: hidden;
@@ -84,7 +87,6 @@
 }
 
 .shop-item:hover {
-    transform: translateY(-5px);
     border-color: rgba(133, 9, 196, 0.3);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
@@ -100,15 +102,15 @@
 .item-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: fill;
     transition: transform 0.5s ease;
 }
 
-.shop-item:hover .item-image img {
-    transform: scale(1.05);
-}
 
 .item-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     padding: 25px;
 }
 
@@ -146,6 +148,15 @@
     align-items: center;
     padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: auto;
+}
+
+.item-details span[style*="Out of Stock"] {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 0.9rem;
+    color: #888;
+    white-space: nowrap;
 }
 
 .item-price {
@@ -153,6 +164,8 @@
     font-weight: 400;
     font-size: 1.3rem;
     color: #ecbfff;
+    flex-shrink: 0;
+    margin-right: 15px;
 }
 
 .item-sizes {
@@ -172,7 +185,12 @@
     transition: all 0.3s ease;
 }
 
-.size-btn:hover,
+.size-btn:hover{
+    border-color: #ecbfff9f;
+    color: #ecbfff9f;
+    background: rgba(133, 69, 196, 0.1);
+}
+
 .size-btn.selected {
     border-color: #ecbfff;
     color: #ecbfff;
@@ -191,11 +209,12 @@
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .add-to-cart:hover {
     background: rgba(133, 69, 196, 0.5);
-    transform: translateY(-2px);
 }
 
 /* Cart Icon */
@@ -211,7 +230,7 @@
     position: absolute;
     top: -8px;
     right: -8px;
-    background: #ecbfff;
+    background: #ecbfff6e;
     color: white;
     font-size: 0.7rem;
     width: 18px;
@@ -401,5 +420,19 @@
     
     .cart-sidebar {
         width: 280px;
+    }
+
+    .item-details {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+    
+    .add-to-cart {
+        width: 100%;
+    }
+    
+    .shop-item {
+        min-height: 500px;
     }
 }
