@@ -48,10 +48,10 @@ const shopItems = [
     {
         id: 5,
         brand: "Rick Owens",
-        name: "Geobasket Sneakers",
-        description: "Black leather high-top sneakers with iconic geometric sole. DS condition from 2019 release.",
+        name: "FW15 Faun Leather Drape Jacket in Black",
+        description: "Embody the dark, poetic grandeur of Rick Owens' visionary universe with this exceptionally rare and iconic jacket from the landmark FW15 Faun collection. This isn't merely a garment; it's a wearable masterpiece, a piece of fashion history that speaks to the connoisseur of radical elegance.",
         price: 1450,
-        image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+        image: "https://i.pinimg.com/736x/f2/8d/f6/f28df6637d5f2573f9b0a464e2ea2f3a.jpg",
         category: "rick",
         sizes: ["41", "42", "43", "44", "45"],
         inStock: true
@@ -62,7 +62,7 @@ const shopItems = [
         name: "Skull Emblem Sweater",
         description: "Black wool sweater with iconic skull embroidery. Limited collaboration piece.",
         price: 2200,
-        image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
+        image: "https://i.pinimg.com/736x/7c/b0/8a/7cb08af012cbb7ab9197bd50a62be21e.jpg",
         category: "mastermind",
         sizes: ["M", "L", "XL"],
         inStock: true

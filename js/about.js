@@ -3,6 +3,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Animation for brand items
     const brandItems = document.querySelectorAll('.brand-item');
+
+    disableScroll();
     
     brandItems.forEach((item, index) => {
         // Staggered animation

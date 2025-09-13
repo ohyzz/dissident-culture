@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const verticalBars = document.getElementById('verticalBars');
     const sideMenu = document.getElementById('sideMenu');
     const closeMenu = document.getElementById('closeMenu');
-    const CartBtn = document.getElementById('cartbtn')
     
     verticalBars.addEventListener('click', function() {
         sideMenu.classList.add('active');
@@ -37,20 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    CartBtn.addEventListener('click', function(event) {
-        const targetUrl = this.getAttribute('data-url');
-        
-        if (targetUrl) {
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.5s ease';
-                
-            setTimeout(() => {
-                window.location.href = targetUrl;
-            }, 500);
-        }
-    });
-    
 
     sideMenu.addEventListener('click', function(event) {
         event.stopPropagation();
