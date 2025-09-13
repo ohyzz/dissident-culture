@@ -6,16 +6,14 @@
     <title>Online Shop - Dissident Culture</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Tangerine:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/preload.css">
+    <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/shop.css">
 </head>
 <body class="shop-background">
-    <!-- Back button -->
     <a href="index.html" class="back-btn">
         <i class="fas fa-arrow-left"></i>
     </a>
 
-    <!-- Navigation sidebar -->
     <div class="side-tab">
         <div class="vertical-bars" id="verticalBars">
             <span></span>
@@ -27,11 +25,9 @@
         </div>
     </div>
 
-    <!-- Side menu -->
     <div class="side-menu" id="sideMenu">
         <div class="menu-content">
             <button class="menu-btn" data-url="index.html">Home</button>
-            <button class="menu-btn" data-url="shop.html">Online Shop</button>
             <button class="menu-btn" data-url="archive.html">Archive</button>
             <button class="menu-btn" data-url="about.html">About</button>
         </div>
@@ -40,7 +36,6 @@
         </div>
     </div>
 
-    <!-- Shopping Cart -->
     <div class="cart-sidebar" id="cartSidebar">
         <div class="cart-header">
             <h3>Your Cart</h3>
@@ -49,7 +44,6 @@
             </div>
         </div>
         <div class="cart-items" id="cartItems">
-            <!-- Cart items will be populated by JavaScript -->
         </div>
         <div class="cart-total">
             Total: $<span id="cartTotal">0</span>
@@ -57,7 +51,6 @@
         <button class="checkout-btn">Checkout</button>
     </div>
 
-    <!-- Main content -->
     <div class="shop-container">
         <h1 class="shop-title">Online Shop</h1>
         <p class="shop-subtitle">Avant-garde collections & exclusive pieces</p>
@@ -65,14 +58,13 @@
         <div class="filters">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="rick">Rick Owens</button>
-            <button class="filter-btn" data-filter="balenciaga">Balenciaga</button>
+            <button class="filter-btn" data-filter="ccp">Carol Christian Poell</button>
             <button class="filter-btn" data-filter="numbernine">Number Nine</button>
             <button class="filter-btn" data-filter="erd">Enfants Riches Déprimés</button>
             <button class="filter-btn" data-filter="mastermind">Mastermind Japan</button>
         </div>
 
         <div class="shop-grid" id="shopGrid">
-            <!-- Items will be populated by JavaScript -->
         </div>
     </div>
 
