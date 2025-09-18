@@ -1,13 +1,9 @@
-// about.js - JavaScript specific to the About page
+console.log('write: \"startGame()\"');
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Animation for brand items
     const brandItems = document.querySelectorAll('.brand-item');
-
-    disableScroll();
     
     brandItems.forEach((item, index) => {
-        // Staggered animation
         item.style.opacity = '0';
         item.style.transform = 'translateY(20px)';
         
@@ -18,14 +14,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100 * index);
     });
     
-    // Parallax effect for background
     window.addEventListener('scroll', function() {
         const scrollPosition = window.pageYOffset;
         const background = document.querySelector('body');
         background.style.backgroundPosition = `50% ${scrollPosition * 0.4}px`;
     });
     
-    // Text animation
     const aboutText = document.querySelector('.about-text');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -40,4 +34,25 @@ document.addEventListener('DOMContentLoaded', function() {
     aboutText.style.transform = 'translateY(20px)';
     aboutText.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
     observer.observe(aboutText);
+
+    document.querySelectorAll('.brand-button').forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            const url = this.getAttribute('href');
+                
+            // Добавляем анимацию перехода
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.4s ease';
+                
+            // Переход после завершения анимации
+            setTimeout(() => {
+                window.location.href = url;
+            }, 400);
+        });
+    })
+
 });
+
+function startGame() {
+    window.location.href = './secret.html'
+}

@@ -1,3 +1,5 @@
+console.log('write: \"startGame()\"');
+
 document.addEventListener('DOMContentLoaded', function() {
     const verticalBars = document.getElementById('verticalBars');
     const sideMenu = document.getElementById('sideMenu');
@@ -13,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
 
     document.addEventListener('click', function(event) {
-        if (sideMenu.classList.contains('active') && 
+        if (sideMenu.classList.contains('active') &&
             !sideMenu.contains(event.target) && 
             !verticalBars.contains(event.target)) {
             sideMenu.classList.remove('active');
@@ -41,3 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         event.stopPropagation();
     });
 });
+
+function startGame() {
+    window.location.href = './secret.html'
+}

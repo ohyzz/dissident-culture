@@ -1,4 +1,4 @@
-// shop.js - JavaScript for Online Shop page
+console.log('write: \"startGame()\"');
 
 const shopItems = [
     {
@@ -53,7 +53,7 @@ const shopItems = [
         price: 1450,
         image: "https://i.pinimg.com/736x/f2/8d/f6/f28df6637d5f2573f9b0a464e2ea2f3a.jpg",
         category: "rick",
-        sizes: ["41", "42", "43", "44", "45"],
+        sizes: ["M", 'L'],
         inStock: true
     },
     {
@@ -64,7 +64,7 @@ const shopItems = [
         price: 2200,
         image: "https://i.pinimg.com/736x/7c/b0/8a/7cb08af012cbb7ab9197bd50a62be21e.jpg",
         category: "mastermind",
-        sizes: ["M", "L", "XL"],
+        sizes: ["L", "XL"],
         inStock: true
     }
 ];
@@ -253,3 +253,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.backgroundPosition = `50% ${scrollPosition * 0.4}px`;
     });
 });
+
+function startGame() {
+    window.location.href = './secret.html'
+}

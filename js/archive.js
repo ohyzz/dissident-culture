@@ -1,30 +1,31 @@
+console.log('write: \"startGame()\"');
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Enable scroll
-    enableScroll();
-    
     const snapContainer = document.querySelector('.archive-snap-container');
     const sections = document.querySelectorAll('.snap-section');
     const dots = createNavigationDots();
     let isScrolling = false;
     let currentSection = 0;
-    
+
+    enableScroll();
+
     // Create navigation dots
     function createNavigationDots() {
         const dotsContainer = document.createElement('div');
         dotsContainer.className = 'navigation-dots';
-        
+
         sections.forEach((_, index) => {
             const dot = document.createElement('div');
             dot.className = 'dot';
             if (index === 0) dot.classList.add('active');
-            
+
             dot.addEventListener('click', () => {
                 scrollToSection(index);
             });
-            
+
             dotsContainer.appendChild(dot);
         });
-        
+
         document.body.appendChild(dotsContainer);
         return dotsContainer.querySelectorAll('.dot');
     }
@@ -153,3 +154,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.style.backgroundPosition = `50% ${scrollPosition * 0.4}px`;
     });
 });
+
+function startGame() {
+    window.location.href = './secret.html'
+}
