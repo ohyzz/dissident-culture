@@ -1,7 +1,5 @@
 body {
-    background-color: 141414;
-    background-image: url('/dissident-culture-main/img/texture-background.png');
-    background-size: cover;
+    background-image: url("/img/texture-background.png");
 }
 
 .about-container {
@@ -88,26 +86,76 @@ body {
 
 .brands-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 30px;
 }
 
-.brand-item {
-    padding: 15px;
+.brand-button {
+    display: inline-block;
+    width: 100%;
+    padding: 15px 20px;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     color: #ccc;
-    transition: all 0.3s ease;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.brand-item:hover {
-    border-color: #d476ff;
-    color: #fff;
+.brand-button:hover {
+    /*border-color: rgba(113, 69, 233, 0.3);*/
+    color: #ecbfff;
     transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
+        
+.brand-button:active {
+    transform: translateY(0);
+}
+        
+.brand-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 1s ease;
+}
+        
+.brand-button:hover::before {
+    left: 100%;
+}
+        
+.brand-button {
+    opacity: 0;
+    transform: translateY(20px);
+        animation: fadeInUp 0.6s ease forwards;
+}
+        
+.brand-button:nth-child(1) { animation-delay: 0.1s; }
+.brand-button:nth-child(2) { animation-delay: 0.2s; }
+.brand-button:nth-child(3) { animation-delay: 0.3s; }
+.brand-button:nth-child(4) { animation-delay: 0.4s; }
+.brand-button:nth-child(5) { animation-delay: 0.5s; }
+        
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 
 /* Back button */
 .back-btn {

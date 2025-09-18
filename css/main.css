@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #141414;
+    background-color: #0a0a0a;
     color: #fff;
     font-family: 'Inter', sans-serif;
     height: 100vh;
@@ -27,22 +27,23 @@ body {
 
 .dissident-text {
     font-family: 'Tangerine', cursive;
-    font-size: 8rem;
+    font-size: 12rem;
     font-weight: 700;
     color: #fff;
-    margin-bottom: -0.5rem;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    /*margin-bottom: -0.5rem;*/
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     opacity: 90%;
 }
 
 .culture-text {
     font-family: 'Inter', sans-serif;
-    font-weight: 300;
-    font-size: 1.2rem;
+    font-weight: 100;
+    font-size: 1.7rem;
     letter-spacing: 15px;
     text-transform: uppercase;
     color: #ccc;
     opacity: 80%;
+    margin-top: -2rem;
 }
 
 /* Боковая панель */
@@ -64,7 +65,7 @@ body {
 
 .vertical-bars {
     display: flex;
-    flex-direction: grid;
+    flex-direction: row;
     gap: 10px;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -194,12 +195,13 @@ body {
 
 @media (max-width: 768px) {
     .dissident-text {
-        font-size: 5rem;
+        font-size: 7rem;
     }
     
     .culture-text {
-        font-size: 1rem;
+        font-size: 1.2rem;
         letter-spacing: 10px;
+        margin-top: -1rem;
     }
     
     .side-menu {

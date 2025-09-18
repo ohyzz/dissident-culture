@@ -1,0 +1,101 @@
+body {
+    background-image: url("/img/Background.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.rick-text {
+    font-family: "Luxurious Script", cursive;
+    font-size: 10rem;
+    font-weight: 100;
+    color: #fff;
+    text-align: center;
+    /*margin-top: -10rem;*/
+    padding-bottom: 50px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.text-container {
+    max-width: 1000px;
+    margin: -20px auto;
+    padding: 40px;
+    /*background-color: rgba(10, 10, 10, 0.8);*/
+    /*border-radius: 8px;*/
+    /*box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);*/
+    position: relative;
+    z-index: 2;
+}
+
+.quote-text {
+    font-family: "Herr Von Muellerhoff", cursive;
+    font-weight: 100;
+    font-style: italic;
+    font-size: 4rem;
+    color: #fff;
+    text-align: left;
+    line-height: 1;
+    /*opacity: 90%;*/
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.author-text {
+    font-size: 2rem;
+    text-align: left;
+    margin-top: 40px;
+    /*margin-bottom: 10px;*/
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.information-text {
+    font-size: 1rem;
+    text-align: left;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.scroll-indicator {
+    position: absolute;
+    top: 800px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    font-size: 2rem;
+    animation: bounce 2s infinite, fadeIn 2s ease-out forwards;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .text-container {
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .text-container {
+        margin-left: 50px;
+    }
+    .rick-text {
+        font-size: 8rem;
+    }
+    .quote-text {
+        font-size: 3rem;
+    }
+    .author-text {
+        font-size: 1.5rem;
+    }
+    .information-text {
+        font-size: 1rem;
+    }
+}
+
