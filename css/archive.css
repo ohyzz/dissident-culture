@@ -261,6 +261,12 @@
     }
 }
 
+@media (max-width: 900px) {
+    .scroll-indicator {
+        opacity: 0;
+    }
+}
+
 @media (max-width: 768px) {
     .archive-header .archive-title {
         font-size: 3.5rem;

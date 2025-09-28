@@ -72,6 +72,7 @@
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
     gap: 30px;
     padding: 0 20px;
+    margin-left: 50px;
 }
 
 .shop-item {
@@ -434,5 +435,9 @@
     
     .shop-item {
         min-height: 500px;
+    }
+
+    .shop-subtitle {
+        margin-left: 50px;
     }
 }

@@ -196,12 +196,14 @@ body {
 @media (max-width: 768px) {
     .dissident-text {
         font-size: 7rem;
+        margin-left: 50px;
     }
     
     .culture-text {
         font-size: 1.2rem;
         letter-spacing: 10px;
         margin-top: -1rem;
+        margin-left: 60px;
     }
     
     .side-menu {

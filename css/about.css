@@ -192,6 +192,7 @@ body {
 @media (max-width: 600px) {
     .brands-grid {
         grid-template-columns: repeat(2, 1fr);
+        margin-left: 20px;
     }
     
     .about-title {
@@ -200,5 +201,18 @@ body {
     
     .about-text {
         font-size: 1rem;
+    }
+
+    .about-content {
+        margin-left: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about-content {
+        margin-left: 30px;
+    }
+    .brands-grid {
+        margin-left: 30px;
     }
 }
