@@ -1,0 +1,678 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Oswald", sans-serif;
+    background-color: #030303;
+    color: #fff;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* Герой секция */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 5%;
+    :width:;
+    position: relative;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-family: "Anton", sans-serif;
+    font-size: 6vw;
+    line-height: 0.9;
+    letter-spacing: -0.2vw;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.glitch {
+    position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.glitch::before {
+    left: 2px;
+    text-shadow: -1px 0 red;
+    animation: glitch-1 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: -2px;
+    text-shadow: -1px 0 blue;
+    animation: glitch-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-1 {
+    0% {
+        clip: rect(42px, 9999px, 44px, 0);
+    }
+    5% {
+        clip: rect(12px, 9999px, 59px, 0);
+    }
+    10% {
+        clip: rect(48px, 9999px, 29px, 0);
+    }
+    15% {
+        clip: rect(42px, 9999px, 73px, 0);
+    }
+    20% {
+        clip: rect(63px, 9999px, 27px, 0);
+    }
+    25% {
+        clip: rect(34px, 9999px, 55px, 0);
+    }
+    30% {
+        clip: rect(86px, 9999px, 73px, 0);
+    }
+    35% {
+        clip: rect(20px, 9999px, 20px, 0);
+    }
+    40% {
+        clip: rect(26px, 9999px, 60px, 0);
+    }
+    45% {
+        clip: rect(25px, 9999px, 66px, 0);
+    }
+    50% {
+        clip: rect(57px, 9999px, 98px, 0);
+    }
+    55% {
+        clip: rect(5px, 9999px, 46px, 0);
+    }
+    60% {
+        clip: rect(82px, 9999px, 31px, 0);
+    }
+    65% {
+        clip: rect(54px, 9999px, 27px, 0);
+    }
+    70% {
+        clip: rect(28px, 9999px, 99px, 0);
+    }
+    75% {
+        clip: rect(45px, 9999px, 69px, 0);
+    }
+    80% {
+        clip: rect(23px, 9999px, 85px, 0);
+    }
+    85% {
+        clip: rect(54px, 9999px, 84px, 0);
+    }
+    90% {
+        clip: rect(45px, 9999px, 47px, 0);
+    }
+    95% {
+        clip: rect(37px, 9999px, 20px, 0);
+    }
+    100% {
+        clip: rect(4px, 9999px, 91px, 0);
+    }
+}
+
+@keyframes glitch-2 {
+    0% {
+        clip: rect(65px, 9999px, 100px, 0);
+    }
+    5% {
+        clip: rect(52px, 9999px, 74px, 0);
+    }
+    10% {
+        clip: rect(79px, 9999px, 85px, 0);
+    }
+    15% {
+        clip: rect(75px, 9999px, 5px, 0);
+    }
+    20% {
+        clip: rect(67px, 9999px, 61px, 0);
+    }
+    25% {
+        clip: rect(14px, 9999px, 79px, 0);
+    }
+    30% {
+        clip: rect(1px, 9999px, 66px, 0);
+    }
+    35% {
+        clip: rect(86px, 9999px, 30px, 0);
+    }
+    40% {
+        clip: rect(23px, 9999px, 98px, 0);
+    }
+    45% {
+        clip: rect(85px, 9999px, 72px, 0);
+    }
+    50% {
+        clip: rect(71px, 9999px, 75px, 0);
+    }
+    55% {
+        clip: rect(2px, 9999px, 48px, 0);
+    }
+    60% {
+        clip: rect(30px, 9999px, 16px, 0);
+    }
+    65% {
+        clip: rect(59px, 9999px, 50px, 0);
+    }
+    70% {
+        clip: rect(41px, 9999px, 62px, 0);
+    }
+    75% {
+        clip: rect(2px, 9999px, 82px, 0);
+    }
+    80% {
+        clip: rect(47px, 9999px, 73px, 0);
+    }
+    85% {
+        clip: rect(3px, 9999px, 27px, 0);
+    }
+    90% {
+        clip: rect(26px, 9999px, 55px, 0);
+    }
+    95% {
+        clip: rect(42px, 9999px, 97px, 0);
+    }
+    100% {
+        clip: rect(38px, 9999px, 49px, 0);
+    }
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 1.5rem;
+    opacity: 0.8;
+}
+
+.hero-quote {
+    font-style: italic;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    opacity: 0.7;
+    border-left: 2px solid #fff;
+    padding-left: 1rem;
+}
+
+.image-collage {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    height: 500px;
+}
+
+.collage-item {
+    background: #333;
+    position: relative;
+    overflow: hidden;
+}
+
+.collage-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.collage-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Стили для изображений */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.main-image {
+    grid-column: 1 / 3;
+    background: linear-gradient(45deg, #1a1a1a, #333);
+}
+
+.small-image-1 {
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.highsnobiety.com%2Fstatic-assets%2Fdato%2F1750969116-rick-owens-ss26-2.jpg&f=1&nofb=1&ipt=e439e7b6c98871db7b3fe16a587b709d7c4ace946aee5a71394e6d369af22d70");
+    background: linear-gradient(45deg, #2a2a2a, #444);
+}
+.small-image-2,
+.small-image-3 {
+    background: linear-gradient(45deg, #2a2a2a, #444);
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 50px;
+    background: #fff;
+    animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+}
+
+/* Секции */
+.section {
+    min-height: 100vh;
+    padding: 8rem 5%;
+    position: relative;
+}
+
+.section.dark {
+    background: #0a0a0a;
+}
+
+.section-header {
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-family: "Anton", sans-serif;
+    font-size: 3rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+}
+
+.section-header h2 span {
+    opacity: 0.3;
+    margin-right: 1rem;
+}
+
+.section-divider {
+    width: 100px;
+    height: 2px;
+    background: #fff;
+}
+
+/* Сетка контента */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.text-content .lead {
+    font-size: 1.3rem;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+/* Таймлайн */
+.history-timeline {
+    margin-top: 3rem;
+}
+
+.timeline-item {
+    display: flex;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-year {
+    font-family: "Anton", sans-serif;
+    font-size: 1.5rem;
+    min-width: 80px;
+    opacity: 0.7;
+}
+
+.timeline-content {
+    border-left: 2px solid #333;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+
+.timeline-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Поляроиды */
+.polaroid-stack {
+    position: relative;
+}
+
+.polaroid {
+    background: #fff;
+    padding: 1rem 1rem 2rem 1rem;
+    transform: rotate(2deg);
+    color: #000;
+    max-width: 300px;
+}
+
+.polaroid-2 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    transform: rotate(-3deg);
+    z-index: 2;
+}
+
+.polaroid-image {
+    height: 200px;
+    background: #ddd;
+    margin-bottom: 1rem;
+}
+
+.polaroid-caption {
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Карточки философии */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.philosophy-card {
+    padding: 2rem;
+    border: 1px solid #333;
+    transition: all 0.3s ease;
+}
+
+.philosophy-card:hover {
+    border-color: #fff;
+    transform: translateY(-5px);
+}
+
+.card-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.philosophy-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1px;
+}
+
+/* Слайдер цитат */
+.quote-slider {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.quote {
+    font-size: 1.3rem;
+    font-style: italic;
+    text-align: center;
+    display: none;
+}
+
+.quote.active {
+    display: block;
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Витрина эстетики */
+.aesthetic-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.aesthetic-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.aesthetic-item.reverse {
+    direction: rtl;
+}
+
+.aesthetic-item.reverse > * {
+    direction: ltr;
+}
+
+.aesthetic-image {
+    height: 400px;
+    background: #333;
+}
+
+.aesthetic-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%) contrast(120%);
+    transition: filter 0.3s ease;
+}
+
+.aesthetic-image:hover img {
+    filter: grayscale(0%) contrast(100%);
+}
+.aesthetic-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+/* Карусель коллекций */
+.collections-carousel {
+    position: relative;
+}
+
+.carousel-container {
+    position: relative;
+    height: 600px;
+    overflow: hidden;
+}
+
+.collection-bg {
+    height: 600px;
+    overflow: hidden;
+}
+
+.collection-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: contrast(110%);
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+}
+
+.collection-visual {
+    position: relative;
+    background: #1a1a1a;
+    height: 600px;
+}
+
+.collection-overlay {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.collection-season {
+    font-size: 0.9rem;
+    opacity: 1;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.collection-title {
+    font-family: "Anton", sans-serif;
+    font-size: 3rem;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.collection-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.collection-stats {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.stat {
+    padding: 0.5rem 1rem;
+    border: 1px solid #333;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.carousel-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.carousel-prev,
+.carousel-next {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background: #fff;
+    color: #000;
+}
+
+.carousel-indicators {
+    display: flex;
+    gap: 1rem;
+}
+
+.indicator {
+    cursor: pointer;
+    opacity: 0.3;
+    transition: opacity 0.3s ease;
+}
+
+.indicator.active {
+    opacity: 1;
+}
+
+/* Футер */
+.main-footer {
+    background: #0a0a0a;
+    padding: 4rem 5% 2rem;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+.footer-text {
+    opacity: 0.5;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+}
+
+.decoration-line {
+    width: 100px;
+    height: 1px;
+    background: #fff;
+    margin: 0 auto;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aesthetic-item {
+        grid-template-columns: 1fr;
+    }
+
+    .carousel-item {
+        grid-template-columns: 1fr;
+    }
+}

@@ -4,6 +4,7 @@ body {
 
 .about-container {
     max-width: 1000px;
+    max-height: 800px;
     margin: 80px auto;
     padding: 40px;
     background-color: rgba(10, 10, 10, 0.8);
@@ -14,7 +15,7 @@ body {
 }
 
 .about-title {
-    font-family: 'Tangerine', cursive;
+    font-family: "Tangerine", cursive;
     font-size: 4rem;
     text-align: center;
     margin-bottom: 40px;
@@ -30,7 +31,7 @@ body {
 }
 
 .about-text {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 300;
     line-height: 1.8;
     font-size: 1.1rem;
@@ -55,7 +56,7 @@ body {
 }
 
 .value-item h3 {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 400;
     font-size: 1.3rem;
     color: #ecbfff;
@@ -63,18 +64,14 @@ body {
 }
 
 .value-item p {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 300;
     color: #ccc;
     line-height: 1.6;
 }
 
-.brands-section {
-    margin-top: 60px;
-}
-
 .brands-section h2 {
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 300;
     font-size: 1.8rem;
     text-align: center;
@@ -98,7 +95,7 @@ body {
     text-align: center;
     background-color: rgba(255, 255, 255, 0.03);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     font-weight: 300;
     color: #ccc;
     text-decoration: none;
@@ -117,45 +114,59 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
-        
+
 .brand-button:active {
     transform: translateY(0);
 }
-        
+
 .brand-button::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
     transition: left 1s ease;
 }
-        
+
 .brand-button:hover::before {
     left: 100%;
 }
-        
+
 .brand-button {
     opacity: 0;
     transform: translateY(20px);
-        animation: fadeInUp 0.6s ease forwards;
+    animation: fadeInUp 0.6s ease forwards;
 }
-        
-.brand-button:nth-child(1) { animation-delay: 0.1s; }
-.brand-button:nth-child(2) { animation-delay: 0.2s; }
-.brand-button:nth-child(3) { animation-delay: 0.3s; }
-.brand-button:nth-child(4) { animation-delay: 0.4s; }
-.brand-button:nth-child(5) { animation-delay: 0.5s; }
-        
+
+.brand-button:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.brand-button:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.brand-button:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.brand-button:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.brand-button:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
 @keyframes fadeInUp {
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
-
 
 /* Back button */
 .back-btn {
@@ -178,12 +189,12 @@ body {
     .about-content {
         grid-template-columns: 1fr;
     }
-    
+
     .about-container {
         margin: 60px 20px;
         padding: 30px;
     }
-    
+
     .about-title {
         font-size: 3rem;
     }
@@ -194,11 +205,11 @@ body {
         grid-template-columns: repeat(2, 1fr);
         margin-left: 20px;
     }
-    
+
     .about-title {
         font-size: 2.5rem;
     }
-    
+
     .about-text {
         font-size: 1rem;
     }
