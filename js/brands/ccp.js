@@ -1,6 +1,6 @@
 // Анимация появления элементов при скролле
 document.addEventListener("DOMContentLoaded", function () {
-  const fadeElements = document.querySelectorAll(".fade-in");
+  const fadeElements = document.querySelectorAll(".section");
 
   const fadeInObserver = new IntersectionObserver(
     (entries) => {
@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     },
-    { threshold: 0.1 },
+    { threshold: 0.06 },
   );
 
   fadeElements.forEach((element) => {

@@ -66,7 +66,6 @@ body::after {
     align-items: center;
     gap: 4rem;
     width: 100%;
-    max-width: 1100px;
 }
 
 /* ── CASSETTE ──────────────────────────────── */
@@ -287,7 +286,7 @@ body::after {
     opacity: 0.75;
 }
 
-.section-content { max-width: 1100px; }
+.section-content { }
 
 .section-title {
     font-family: var(--fh);
@@ -301,7 +300,6 @@ body::after {
 .section p {
     font-size: 1.2rem;
     color: rgba(216,204,184,0.75);
-    max-width: 55ch;
     margin-bottom: 1.2rem;
 }
 
