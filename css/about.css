@@ -1,0 +1,368 @@
+/* ── Backgrounds by page ──────────────────────── */
+body[data-page="about"] {
+    background-color: #090909;
+    background-image:
+        repeating-linear-gradient(
+            -45deg,
+            transparent 0px, transparent 34px,
+            rgba(255, 255, 255, 0.016) 34px, rgba(255, 255, 255, 0.016) 35px
+        );
+}
+
+body[data-page="brands"] {
+    background-color: #07060b;
+    background-image:
+        radial-gradient(ellipse 90% 70% at 50% 28%, rgba(80, 0, 160, 0.09) 0%, transparent 65%),
+        repeating-linear-gradient(
+            0deg, transparent 0px, transparent 79px,
+            rgba(255, 255, 255, 0.022) 79px, rgba(255, 255, 255, 0.022) 80px
+        ),
+        repeating-linear-gradient(
+            90deg, transparent 0px, transparent 79px,
+            rgba(255, 255, 255, 0.022) 79px, rgba(255, 255, 255, 0.022) 80px
+        );
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 80px auto;
+    padding: 40px 40px 48px 92px;
+    background-color: rgba(10, 10, 10, 0.8);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+}
+
+.about-title {
+    font-family: "Great Vibes", cursive;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.about-text {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #e6e6e6;
+}
+
+.about-text p {
+    margin-bottom: 20px;
+}
+
+.values-section {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.value-item {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    border-left: 3px solid #888888;
+}
+
+.value-item h3 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-size: 2rem;
+    color: #ecbfff;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.value-item p {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.brands-section h2 {
+    font-family: "Great Vibes", cursive;
+    font-weight: 400;
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fff;
+    letter-spacing: 1.5px;
+    text-transform: none;
+}
+
+.brands-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    margin-top: 30px;
+}
+
+.brand-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    width: 100%;
+    padding: 20px 24px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    color: #ccc;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.brand-name {
+    font-size: 1rem;
+    color: #ccc;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: color 0.4s ease;
+}
+
+.brand-tagline {
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.28);
+    letter-spacing: 0.3px;
+    text-transform: none;
+    font-weight: 300;
+    transition: color 0.4s ease;
+}
+
+.brand-button:hover {
+    border-color: rgba(133, 9, 196, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(133, 9, 196, 0.08);
+}
+
+.brand-button:hover .brand-name { color: #ecbfff; }
+.brand-button:hover .brand-tagline { color: rgba(255, 255, 255, 0.5); }
+
+.brand-button:active {
+    transform: translateY(0);
+}
+
+.brand-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.1),
+        transparent
+    );
+    transition: left 1s ease;
+}
+
+.brand-button:hover::before {
+    left: 100%;
+}
+
+.brand-button {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.brand-button:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.brand-button:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.brand-button:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.brand-button:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.brand-button:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Stats row ────────────────────────────────── */
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 3rem 0 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.stat-block {
+    text-align: center;
+    padding: 2.2rem 1rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+    opacity: 0;
+    transform: translateY(16px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stat-block:last-child { border-right: none; }
+
+.stat-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stat-block:nth-child(2) { transition-delay: 0.12s; }
+.stat-block:nth-child(3) { transition-delay: 0.24s; }
+
+.stat-num {
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-size: 3rem;
+    color: #ecbfff;
+    line-height: 1;
+    margin-bottom: 0.6rem;
+    letter-spacing: -1px;
+}
+
+.stat-label {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* ── Manifesto ────────────────────────────────── */
+.manifesto-section {
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.manifesto-label {
+    font-family: "Inter", sans-serif;
+    font-weight: 300;
+    font-size: 0.68rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(236, 191, 255, 0.5);
+    margin-bottom: 1.8rem;
+}
+
+.manifesto-line {
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
+    font-size: 1.55rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+    padding: 0.3rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    opacity: 0;
+    transform: translateX(-18px);
+    transition: opacity 0.65s ease, transform 0.65s ease, color 0.3s ease;
+}
+
+.manifesto-line:last-child { border-bottom: none; }
+
+.manifesto-line.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.manifesto-line:nth-child(1) { transition-delay: 0.0s; color: #fff; }
+.manifesto-line:nth-child(2) { transition-delay: 0.1s; }
+.manifesto-line:nth-child(3) { transition-delay: 0.2s; }
+.manifesto-line:nth-child(4) { transition-delay: 0.3s; color: rgba(236, 191, 255, 0.75); }
+
+.manifesto-line:hover { color: #fff; }
+
+/* Back button */
+/* Responsive design */
+@media (max-width: 900px) {
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        margin: 72px 20px 32px 76px;
+        padding: 30px;
+    }
+
+    .about-title {
+        font-size: 3rem;
+    }
+
+    .about-content,
+    .brands-grid {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .brands-grid {
+        grid-template-columns: 1fr;
+        margin-left: 0;
+    }
+
+    .about-title {
+        font-size: 2.5rem;
+    }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .about-content {
+        margin-left: 0;
+        gap: 24px;
+    }
+
+    .about-container {
+        margin: 72px 16px 24px 58px;
+        padding: 24px 20px 28px;
+    }
+
+    .brands-section h2 {
+        font-size: 2.2rem;
+        letter-spacing: 0.5px;
+    }
+
+    .brand-button {
+        padding: 14px 16px;
+        font-size: 0.9rem;
+    }
+
+    .value-item {
+        padding: 18px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .about-content,
+    .brands-grid {
+        margin-left: 0;
+    }
+}

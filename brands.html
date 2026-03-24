@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Бренды — Dissident Culture</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@200;300;400&family=Tangerine:wght@700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/about.css" />
+        <link rel="stylesheet" href="css/side-menu.css">
+    </head>
+    <body data-page="brands">
+        <!-- Back button -->
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+        </a>
+
+        <!-- Navigation sidebar -->
+        <div class="side-tab">
+            <div class="vertical-bars" id="verticalBars">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <!-- Side menu -->
+        <div class="side-menu" id="sideMenu">
+            <div class="menu-content">
+                <button class="menu-btn" data-url="index.html">Главная</button>
+                <button class="menu-btn" data-url="shop.html">
+                    Онлайн магазин
+                </button>
+                <button class="menu-btn" data-url="archive.html">Архив</button>
+
+                <button class="menu-btn" data-url="about.html">О нас</button>
+            </div>
+            <div class="close-btn" id="closeMenu">
+                <i class="fas fa-times"></i>
+            </div>
+        </div>
+
+        <!-- Main content -->
+        <div class="about-container">
+            <div class="brands-section">
+                <h2>Основные дизайнеры</h2>
+                <div class="brands-grid">
+                    <a href="brands/rick-owens.html" class="brand-button">
+                        <span class="brand-name">Rick Owens</span>
+                        <span class="brand-tagline">Брутальная элегантность. Тёмный Париж.</span>
+                    </a>
+                    <a href="brands/number-nine.html" class="brand-button">
+                        <span class="brand-name">Number (N)ine</span>
+                        <span class="brand-tagline">Tokyo grunge. Меланхолия и звук.</span>
+                    </a>
+                    <a href="brands/erd.html" class="brand-button">
+                        <span class="brand-name">Enfants Riches Déprimés</span>
+                        <span class="brand-tagline">Роскошь через разрушение.</span>
+                    </a>
+                    <a href="brands/ccp.html" class="brand-button">
+                        <span class="brand-name">Carol Christian Poell</span>
+                        <span class="brand-tagline">Одежда как скульптура.</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/script.js"></script>
+        <script src="js/about.js"></script>
+    </body>
+</html>
