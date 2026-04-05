@@ -598,7 +598,7 @@ body {
 
 @media (max-width: 480px) {
     .container {
-        padding-left: 54px;
+        /* padding-left: 54px; */
         padding-right: 0.75rem;
     }
 
