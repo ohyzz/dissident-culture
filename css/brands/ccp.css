@@ -545,9 +545,13 @@ footer {
     .drip-container { display: none; }
 }
 
+/* Mobile: side-tab is top-right button — remove left offset */
+@media (max-width: 768px) {
+    .hero { padding: 4.5rem 1.2rem 1.5rem 1.2rem; }
+    .container { padding: 0 1.2rem 4rem 1.2rem; }
+}
+
 @media (max-width: 480px) {
-    .hero { padding-left: calc(1rem + 50px); }
-    .container { padding-left: calc(1rem + 50px); }
-    .hero-title { font-size: clamp(2rem, 14vw, 4rem); }
+    .hero-title { font-size: clamp(1.8rem, 10vw, 4rem); }
     .two-col { gap: 2rem; }
 }

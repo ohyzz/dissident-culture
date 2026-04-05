@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+html { overflow-x: hidden; }
+
 @font-face {
     font-family: "Graffiti";
     src: url("https://fonts.cdnfonts.com/css/bombing");
@@ -521,7 +523,7 @@ body {
 /* Responsive */
 @media (max-width: 768px) {
     .container {
-        padding: 1rem 1rem 1.5rem 60px;
+        padding: 5rem 1rem 1.5rem 1rem;
     }
 
     .main-title {
@@ -588,6 +590,10 @@ body {
         font-size: 1.05rem;
         letter-spacing: 0.08em;
     }
+    .main-title
+    {
+        line-height: 4.5rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -611,5 +617,9 @@ body {
         left: 0.75rem;
         right: 0.75rem;
         bottom: 0.75rem;
+    }
+    .main-title
+    {
+        line-height: 4.5rem;
     }
 }

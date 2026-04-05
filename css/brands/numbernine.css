@@ -2,6 +2,8 @@
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
+html { overflow-x: hidden; }
+
 :root {
     --bg:    #0a0909;
     --bg2:   #111010;
@@ -519,7 +521,7 @@ cite {
 
 /* ── FOOTER ────────────────────────────────── */
 .nn-footer {
-    padding: 4rem 5% 3rem calc(5% + 60px);
+    padding: 4rem 5% 3rem 5%;
     border-top: 1px solid rgba(184,150,90,0.15);
     text-align: center;
 }
@@ -567,7 +569,10 @@ cite {
         gap: 3rem;
     }
 
-    .section { padding: 4rem 5% 4rem calc(5% + 60px); }
+    /* Side-tab is top-right on mobile — remove left offset */
+    .hero { padding: 5rem 5% 120px 5%; }
+    .section { padding: 4rem 5% 4rem 5%; }
+    .footer-nn { padding: 3rem 5%; }
 }
 
 @media (max-width: 480px) {

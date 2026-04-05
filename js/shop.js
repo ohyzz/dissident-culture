@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
             itemElement.innerHTML = `
                 <div class="item-image">
                     <img src="${item.image}" alt="${item.name}" onerror="this.src='https://images.unsplash.com/photo-1551028719-00167b16eac5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80'">
-                    ${!item.inStock ? '<div class="sold-badge">OUT OF STOCK</div>' : ''}
+                    ${!item.inStock ? '<div class="sold-badge">Нет в наличии</div>' : ''}
                 </div>
                 <div class="item-info">
                     <div class="item-brand">${item.brand}</div>
@@ -137,9 +137,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="item-details">
                         <span class="item-price">$${item.price.toLocaleString()}</span>
                         ${item.inStock ? `
-                            <button class="add-to-cart" data-item="${item.id}">Add to Cart</button>
+                            <button class="add-to-cart" data-item="${item.id}">Добавить</button>
                         ` : `
-                            <span style="color: #888; font-size: 0.9rem;">Out of Stock</span>
+                            <span style="color: #888; font-size: 0.9rem;">Нет в наличии</span>
                         `}
                     </div>
                 </div>
@@ -183,12 +183,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
 
                     const btn = this;
-                    btn.textContent = '✓ Added';
+                    btn.textContent = '✓ Добавлено';
                     btn.disabled = true;
                     btn.style.borderColor = '#b8ffcc';
                     btn.style.color = '#b8ffcc';
                     setTimeout(() => {
-                        btn.textContent = 'Add to Cart';
+                        btn.textContent = 'Добавить';
                         btn.disabled = false;
                         btn.style.borderColor = '';
                         btn.style.color = '';

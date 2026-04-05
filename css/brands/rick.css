@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+html { overflow-x: hidden; }
+
 body {
     font-family: "Oswald", sans-serif;
     background-color: #030303;
@@ -655,7 +657,7 @@ img {
 @media (max-width: 768px) {
     .hero {
         min-height: auto;
-        padding: 6rem 16px 4rem 60px;
+        padding: 5rem 16px 4rem 16px;
     }
 
     .hero-content {
@@ -699,7 +701,7 @@ img {
 
     .section {
         min-height: auto;
-        padding: 4rem 16px 4rem 60px;
+        padding: 4rem 16px 4rem 16px;
     }
 
     .section-header h2 {
@@ -758,7 +760,7 @@ img {
     }
 
     .main-footer {
-        padding: 3rem 16px 2rem 60px;
+        padding: 3rem 16px 2rem 16px;
     }
 
     .footer-text {
